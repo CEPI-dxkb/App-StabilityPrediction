@@ -113,8 +113,8 @@ sub preflight
         my $res = count_pdb_residues($pdbFile);
 
         # runtime and memory requirements based on timed test runs
-        my $runtime = (0.0248 * $res ** 2 - 10.294 * $res + 4956.8) * 1.2;
-        my $memReq = (152020 * $res) * 1.2 / 1000000 * 1.2;
+        my $runtime = int((0.0248 * $res ** 2 - 10.294 * $res + 4956.8) * 1.2);
+        my $memReq = int((152020 * $res) * 1.2 / 1000000 * 1.2);
 
         # set CPU, memory requirements, and runtime
         # CPU = 8 is optimal based on rough testing 
@@ -126,15 +126,15 @@ sub preflight
         my $res = count_pdb_residues($pdbFile);
 
         # runtime and memory requirements based on test runs
-        my $runtime = (3.9802 * $res) * 1.2;
-        my $memReq = (137745 * $res) * 1.2;
+        my $runtime = int((3.9802 * $res) * 1.2);
+        my $memReq = int((137745 * $res) * 1.2);
 
         # set CPU, memory requirements, and runtime
         return { cpu => 1, memory => $memReq . "G", runtime => $runtime };
     }
     else {
         my $res = count_pdb_residues($pdbFile);
-        my $memReq = (639.77 * $res + 567236) * 1.2;
+        my $memReq = int((639.77 * $res + 567236) * 1.2);
         # set CPU, memory requirements, and runtime
         # Runtime typically less than 1 minute, but give it a buffer
         #   that is still reasonably small
