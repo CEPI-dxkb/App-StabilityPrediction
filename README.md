@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository holds a BV-BRC module for doing stability prediction.  It currently only supports the use of a custom version of ![ThermoMPNN-D](https://github.com/Tinyman392/ThermoMPNN-D/tree/main) that adds CPU support.  Currently, the module will only run ThermoMPNN in CPU mode (as opposed to GPU mode).  There runtime for inference between CPU and GPU is not huge.  
+This repository holds a BV-BRC module for doing stability prediction.  It currently only supports the use of a custom version of [ThermoMPNN-D](https://github.com/Tinyman392/ThermoMPNN-D/tree/main) that adds CPU support.  Currently, the module will only run ThermoMPNN in CPU mode (as opposed to GPU mode).  There runtime for inference between CPU and GPU is not huge.  
 
 ## Running
 
