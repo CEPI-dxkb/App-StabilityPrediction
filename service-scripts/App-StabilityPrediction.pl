@@ -107,7 +107,7 @@ sub preflight
     #   of various tests
     # Epistatic runs take a LOT longer to run than single or additive
     # For epistatic runs, set runtime to 1 day
-    if($params->{mode}=="epistatic") {
+    if($params->{mode} eq "epistatic") {
         # base runtime and memory on the number of residues in the PDB
         # added a few buffers for better fitment
         my $res = count_pdb_residues($pdbFile);
@@ -121,7 +121,7 @@ sub preflight
         #   for epistatic mode
         return { cpu => 8, memory => $memReq . "G", runtime => $runtime };
     }
-    elsif {
+    elsif($params->{mode} eq "additive") {
         # base runtime and memory on the number of residues in the PDB
         my $res = count_pdb_residues($pdbFile);
 
