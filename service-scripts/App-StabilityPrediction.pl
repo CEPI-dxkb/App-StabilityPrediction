@@ -230,6 +230,6 @@ sub stabPred
     #   file to save output to (workspace)
     #   file type
     #   use shock to store the file
-    $app->workspace->save_file_to_file("thermompnnd.csv", {}, "$folder/thermompnnd.csv", "csv", 1);
+    $app->workspace->save_file_to_file("thermompnnd.csv", {}, "$folder/thermompnnd.csv", "csv", 1, 1);
     $rc = remove_tree($tmp_dir);
 }
