@@ -113,7 +113,7 @@ sub preflight
         my $res = count_pdb_residues($pdbFile);
 
         # runtime and memory requirements based on timed test runs
-        my $runtime = int((0.0248 * $res ** 2 - 10.294 * $res + 4956.8) * 1.2);
+        my $runtime = int((0.0248 * $res ** 2 - 10.294 * $res + 4956.8) * 1.4);
         my $memReq = int((152020 * $res) / 1000000 * 1.4);
 
         # set CPU, memory requirements, and runtime
